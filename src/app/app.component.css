@@ -1,0 +1,17 @@
+.app-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+[mat-button] {
+  height: 50px;
+  width: 50px;
+}
+
+.full {
+  width: 100%;
+  min-height: 110px;
+}

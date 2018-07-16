@@ -1,0 +1,10 @@
+<div *ngFor="let menu of menuItems">
+  <button color="primary" mat-button [routerLink]="menu.link" class="">
+    <span class="float-left">
+      {{menu.text}}
+    </span>
+    <i class="material-icons float-right mt-1">
+        arrow_forward
+    </i>
+  </button>
+</div>
