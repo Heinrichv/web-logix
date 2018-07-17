@@ -14,7 +14,7 @@
     "sizes": "180x180",
     "type": "image/png"
   }],
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "/web-logix/?utm_source=homescreen",
   "display": "standalone",
   "theme_color": "#3f51b5",
   "background_color": "#3f51b5",
