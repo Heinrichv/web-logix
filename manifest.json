@@ -1,15 +1,16 @@
 {
-    "short_name": "Web Logix",
-    "name": "Web Logix",
-    "icons": [
-        {
-          "src":"./assets/logo.png",
-          "sizes": "32x32",
-          "type": "image/png"
-        }
-      ],
-    "start_url": "/?utm_source=homescreen",
-    "background_color": "#fff",
-    "Theme_color": "#3f51b5",
-    "display": "standalone"
-  }
+  "short_name": "Web Logix",
+  "name": "Web Logix",
+  "icons": [{
+    "src": "./assets/logo.png",
+    "sizes": "32x32",
+    "type": "image/png"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "Theme_color": "#3f51b5",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "orientation": "any",
+  "lang": "en-US"
+}
