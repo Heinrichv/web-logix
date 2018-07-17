@@ -3,7 +3,7 @@
     "name": "Web Logix",
     "icons": [
         {
-          "src":"./src/assets/logo.png",
+          "src":"./assets/logo.png",
           "sizes": "32x32",
           "type": "image/png"
         }
