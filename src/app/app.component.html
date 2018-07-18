@@ -1,4 +1,4 @@
-<mat-sidenav-container *ngIf="!isLoading" class="app-container" (backdropClick)="close()">
+<mat-sidenav-container class="app-container" (backdropClick)="close()">
   <mat-sidenav color="primary" mode="push" #sidenav (keydown.escape)="close()" disableClose>
     <app-menubar></app-menubar>
   </mat-sidenav>
