@@ -4,10 +4,9 @@
   </mat-sidenav>
   <mat-sidenav-content class="">
     <div class="clearfix">
-      <button color="primary" class="float-left" mat-button (click)="sidenav.open()">
+      <button color="primary" class="float-left nav-menu-top" mat-flat-button (click)="sidenav.open()">
         <i class="material-icons">menu</i>
       </button>
-      <span class="float-right align-middle">Web Logix 2018</span>
     </div>
     <img id="header" class="img-fluid full" [attr.src]="image.url" [attr.alt]="image.name" />
     <router-outlet></router-outlet>

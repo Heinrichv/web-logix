@@ -1,9 +1,9 @@
-<mat-card color="primary" class="mb-2">
-  Menu
+<mat-card style="background-color: #3f51b5" class="mb-2 text-center">
+  <h4 class="mt-1" style="color:#fff">Web Logix</h4>
 </mat-card>
 <div class="m-1" *ngFor="let menu of menuItems">
   <button color="primary" mat-stroked-button [routerLink]="menu.link" class="nav-select-button">
-    <span class="float-left">
+    <span class="float-left mt-1">
       {{menu.text}}
     </span>
     <mat-icon class="float-right mt-1">arrow_forward</mat-icon>
@@ -11,7 +11,7 @@
 </div>
 <div class="fixed-bottom mb-1">
   <button mat-flat-button class="nav-close-button" type="button" color="primary">
-    <span class="float-left">
+    <span class="float-left mt-1">
       Close Menu
     </span>
     <mat-icon class="float-right mt-1">close</mat-icon>
