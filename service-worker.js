@@ -4,7 +4,7 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(staticCacheName).then(function (cache) {
       return cache.addAll([
-        '/web-logix/manifest.json'
+        'manifest.json'
       ]);
     })
   );
@@ -19,6 +19,7 @@ self.addEventListener('fetch', function (event) {
     event.respondWith(fetch(event.request));
     return;
   }
+
 });
 
 self.addEventListener("beforeinstallprompt", event => {
