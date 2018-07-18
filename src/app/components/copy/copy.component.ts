@@ -16,6 +16,8 @@ export class CopyComponent implements OnInit {
   public body: string;
   public footer: string;
   public path: string;
+  public isLoading = true;
+
   ngOnInit() {
     this.getSiteContent();
   }
@@ -24,7 +26,6 @@ export class CopyComponent implements OnInit {
     this.contentService.getContentItems((res) => {
       if (res !== undefined) {
         res.map(item => {
-
           this.path = window.location.pathname.replace('/', 'copy-');
           let path = (window as any).location.pathname.replace(`\/${(window as any).location.pathname.split('/')[1]}`, '');
 
@@ -36,8 +37,8 @@ export class CopyComponent implements OnInit {
           if (`/${item.system.codename}` === path) {
             this.body = item['contentbody'].value;
             this.footer =  item['footer'].value;
+            this.isLoading = false;
           }
-
         });
       }
     });

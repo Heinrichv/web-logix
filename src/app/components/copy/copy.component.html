@@ -1,4 +1,8 @@
-<div [attr.id]="path">
+<div *ngIf="isLoading" class="mt-5">
+  <mat-spinner class="mx-auto"></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" [attr.id]="path">
     <div id="body" class="m-5">
       <p class="text-black" [innerHTML]="body"></p>
     </div>

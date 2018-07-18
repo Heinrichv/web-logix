@@ -1,10 +1,19 @@
-<div *ngFor="let menu of menuItems">
-  <button color="primary" mat-button [routerLink]="menu.link" class="">
+<mat-card color="primary" class="mb-2">
+  Menu
+</mat-card>
+<div class="m-1" *ngFor="let menu of menuItems">
+  <button color="primary" mat-stroked-button [routerLink]="menu.link" class="nav-select-button">
     <span class="float-left">
       {{menu.text}}
     </span>
-    <i class="material-icons float-right mt-1">
-        arrow_forward
-    </i>
+    <mat-icon class="float-right mt-1">arrow_forward</mat-icon>
+  </button>
+</div>
+<div class="fixed-bottom mb-1">
+  <button mat-flat-button class="nav-close-button" type="button" color="primary">
+    <span class="float-left">
+      Close Menu
+    </span>
+    <mat-icon class="float-right mt-1">close</mat-icon>
   </button>
 </div>

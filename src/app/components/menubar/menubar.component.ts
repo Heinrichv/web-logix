@@ -13,6 +13,7 @@ export class MenubarComponent implements OnInit {
   ) { }
   public headerText: any = '';
   public menuItems: any[] = [];
+  public assetLogo: string;
 
   ngOnInit() {
     this.build();

@@ -1,11 +1,14 @@
-<mat-sidenav-container class="app-container" (backdropClick)="close()">
+<mat-sidenav-container *ngIf="!isLoading" class="app-container" (backdropClick)="close()">
   <mat-sidenav color="primary" mode="push" #sidenav (keydown.escape)="close()" disableClose>
     <app-menubar></app-menubar>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <button color="primary" class="float-left" mat-button (click)="sidenav.open()">
-      <i class="material-icons">menu</i>
-    </button>
+  <mat-sidenav-content class="">
+    <div class="clearfix">
+      <button color="primary" class="float-left" mat-button (click)="sidenav.open()">
+        <i class="material-icons">menu</i>
+      </button>
+      <span class="float-right align-middle">Web Logix 2018</span>
+    </div>
     <img id="header" class="img-fluid full" [attr.src]="image.url" [attr.alt]="image.name" />
     <router-outlet></router-outlet>
   </mat-sidenav-content>

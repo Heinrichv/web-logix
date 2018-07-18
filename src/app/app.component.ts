@@ -36,6 +36,7 @@ export class AppComponent implements OnInit {
             this.path = 'home';
             path = '/home';
           }
+
           if (`/${item.system.codename}` === path) {
             this.image = item['headerimage']['assets'][0];
           }
