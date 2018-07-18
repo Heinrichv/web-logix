@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './components/shared/material/material.module';
@@ -33,13 +34,13 @@ import { DynamodbService } from './services/dynamodb.service';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonModule,
     RouterModule,
     RouterModule.forRoot([
       { path: 'about_us', component: CopyComponent },
       { path: 'home', component: CopyComponent },
       { path: 'services', component: CopyComponent },
       { path: 'contact_us', component: ContactUsComponent },
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', component: CopyComponent }
     ])
   ],

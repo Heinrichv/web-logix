@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       if (res !== undefined) {
         res.map(item => {
           this.path = window.location.pathname.replace('/', 'copy-');
-          let path = window.location.pathname;
+          let path = (window as any).location.pathname.replace(`\/${(window as any).location.pathname.split('/')[1]}`, '');
           if (path === '/') {
             this.path = 'home';
             path = '/home';
