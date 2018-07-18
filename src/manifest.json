@@ -1,6 +1,6 @@
 {
-  "short_name": "Web Logix",
-  "name": "Web Logix",
+  "short_name": "Web Logix - Web Development",
+  "name": "Web Logix - Web Development",
   "icons": [{
       "src": "./assets/icons/apple-touch-icon-57x57.png",
       "sizes": "57x57",
@@ -38,7 +38,7 @@
     }
   ],
   "start_url": "/?utm_source=homescreen",
-  "background_color": "#fff",
+  "background_color": "#3f51b5",
   "Theme_color": "#3f51b5",
   "display": "standalone"
 }
