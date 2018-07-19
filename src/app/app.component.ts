@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ContentService } from './services/content.service';
 import { FieldModels } from 'kentico-cloud-delivery';
 import {MatSidenav} from '@angular/material/sidenav';
+import { MainComponent } from './models/maincomponent';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit {
   }
 
   private getCopy() {
-    this.contentService.getContentItems((res) => {
+    this.contentService.getContentItems((res: MainComponent[]) => {
       if (res !== undefined) {
         res.map(item => {
           this.path = window.location.pathname.replace('/', 'copy-');
@@ -38,7 +39,7 @@ export class AppComponent implements OnInit {
           }
 
           if (`/${item.system.codename}` === path) {
-            this.image = item['headerimage']['assets'][0];
+            this.image = item.headerimage.assets[0];
           }
         });
       }

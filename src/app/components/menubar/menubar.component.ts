@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../../services/content.service';
+import { MainComponentModel } from '../../models/maincomponent';
 
 @Component({
   selector: 'app-menubar',
@@ -25,7 +26,7 @@ export class MenubarComponent implements OnInit {
       path = '/home';
     }
 
-    this.contentService.getContentItems((res) => {
+    this.contentService.getContentItems((res: MainComponentModel[]) => {
       if (res !== undefined) {
         res.map(element => {
           this.menuItems.push({

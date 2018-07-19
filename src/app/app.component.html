@@ -3,12 +3,12 @@
     <app-menubar></app-menubar>
   </mat-sidenav>
   <mat-sidenav-content class="">
-    <div class="clearfix">
-      <button color="primary" class="float-left nav-menu-top" mat-flat-button (click)="sidenav.open()">
+    <div class="clearfix bg-primary p-1">
+      <button color="primary" class="mat-elevation-z3 float-left nav-top-header" mat-flat-button (click)="sidenav.open()">
         <i class="material-icons">menu</i>
       </button>
     </div>
-    <img id="header" class="img-fluid full" [attr.src]="image.url" [attr.alt]="image.name" />
+    <app-card></app-card>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

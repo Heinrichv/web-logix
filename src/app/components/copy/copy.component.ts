@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ContentService } from '../../services/content.service';
-
+import { MainComponentModel } from '../../models/maincomponent';
 
 @Component({
   selector: 'app-copy',
@@ -23,7 +23,7 @@ export class CopyComponent implements OnInit {
   }
 
   private getSiteContent() {
-    this.contentService.getContentItems((res) => {
+    this.contentService.getContentItems((res: MainComponentModel[]) => {
       if (res !== undefined) {
         res.map(item => {
           this.path = window.location.pathname.replace('/', 'copy-');
@@ -35,8 +35,8 @@ export class CopyComponent implements OnInit {
           }
 
           if (`/${item.system.codename}` === path) {
-            this.body = item['contentbody'].value;
-            this.footer =  item['footer'].value;
+            this.body = item.contentbody.value;
+            this.footer =  item.footer.value;
             this.isLoading = false;
           }
         });

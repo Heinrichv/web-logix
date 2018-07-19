@@ -17,6 +17,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 
 import { ContentService } from './services/content.service';
 import { DynamodbService } from './services/dynamodb.service';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { DynamodbService } from './services/dynamodb.service';
     CopyComponent,
     ParticlesComponent,
     MenubarComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

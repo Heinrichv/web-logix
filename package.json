@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start-dev": "ng serve -o --host 192.168.0.105",
+    "start-dev": "ng serve -o --host 192.168.0.105 --base-href \"/web-logix/\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
