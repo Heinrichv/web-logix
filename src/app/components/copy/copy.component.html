@@ -1,12 +1,21 @@
-<div *ngIf="isLoading" class="mt-5">
-  <mat-spinner class="mx-auto"></mat-spinner>
-</div>
-
-<div *ngIf="!isLoading" [attr.id]="path">
-    <div id="body" class="m-5">
-      <p class="text-black" [innerHTML]="body"></p>
+<div class="">
+  <div *ngIf="isLoading" class="mt-5">
+    <mat-spinner class="mx-auto"></mat-spinner>
+  </div>
+  <div *ngIf="!isLoading" [attr.id]="path">
+    <img class="img-fluid banner-image" [attr.src]="headerImage" alt="Web Logix Header Banner" />
+    <div class="container">
+      <div id="body" class="mt-4">
+        <p class="text-black mb-4" [innerHTML]="body"></p>
+        <div class="card-list-block" class="mx-auto" *ngIf="showCards">
+          <div *ngFor="let item of cardComponents">
+            <app-card class="mat-elevation-z8" [card]="item"></app-card>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="mt-5 text-center">
+        <p class="text-black" [innerHTML]="footer"></p>
+      </div>
     </div>
-    <div id="footer" class="mt-5 text-center">
-      <p class="text-black" [innerHTML]="footer"></p>
-    </div>
+  </div>
 </div>

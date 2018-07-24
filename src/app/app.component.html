@@ -1,14 +1,13 @@
 <mat-sidenav-container class="app-container" (backdropClick)="close()">
   <mat-sidenav color="primary" mode="push" #sidenav (keydown.escape)="close()" disableClose>
-    <app-menubar></app-menubar>
+    <app-menubar (closeEvent)="onCloseEvent($event)"></app-menubar>
   </mat-sidenav>
   <mat-sidenav-content class="">
     <div class="clearfix bg-primary p-1">
-      <button color="primary" class="mat-elevation-z3 float-left nav-top-header" mat-flat-button (click)="sidenav.open()">
-        <i class="material-icons">menu</i>
+      <button color="primary" class="mat-elevation-z8 float-left nav-top-header" mat-button (click)="sidenav.open()">
+        <i class="material-icons text-white">menu</i>
       </button>
     </div>
-    <app-card></app-card>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

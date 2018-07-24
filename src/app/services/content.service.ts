@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DeliveryClient, TypeResolver, SortOrder } from 'kentico-cloud-delivery';
+import { TrackingClient, IContactProfileData } from 'kentico-cloud-tracking';
 import { MainComponentModel } from '../models/maincomponent';
 import { CardComponentModel } from '../models/cardcomponent';
 
@@ -16,6 +17,10 @@ export class ContentService {
       new TypeResolver('MainComponent', () => new MainComponentModel()),
       new TypeResolver('MainComponent', () => new CardComponentModel())
     ]
+  });
+
+  private trackingClient = new TrackingClient({
+    projectId: '4f8c5933-9460-004e-95bd-0ac95db4ec8f',
   });
 
   public getContentItems(callback): MainComponentModel[] {
@@ -60,9 +65,16 @@ export class ContentService {
     }
   }
 
+  public createNewContact(contact: IContactProfileData) {
+    this.trackingClient.createContactProfile(contact)
+    .getObservable()
+    .subscribe();
+  }
+
   private getMainComponentsFromService(callback) {
     this.deliveryClient.items<MainComponentModel>()
       .type('maincomponent')
+      .orderParameter('system.last_modified', SortOrder.asc)
       .getObservable()
       .subscribe(res => {
         const expireDate = new Date(new Date().toUTCString());
@@ -78,6 +90,7 @@ export class ContentService {
   private getCardComponentsFromService(callback) {
     this.deliveryClient.items<CardComponentModel>()
       .type('cardcomponent')
+      .orderParameter('system.last_modified', SortOrder.desc)
       .getObservable()
       .subscribe(res => {
         const expireDate = new Date(new Date().toUTCString());

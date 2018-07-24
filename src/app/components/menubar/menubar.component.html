@@ -2,14 +2,14 @@
   <h4 class="mt-1 text-white">Web Logix</h4>
 </mat-card>
 <div class="m-1" *ngFor="let menu of menuItems">
-  <button color="primary" mat-stroked-button [routerLink]="menu.link" class="mat-elevation-z3 nav-select-button">
+  <button (click)="navigate(menu.link)" color="primary" mat-stroked-button class="font-weight-bold active-button mat-elevation-z3 nav-select-button">
     <span class="float-left mt-1">
       {{menu.text}}
     </span>
   </button>
 </div>
 <div class="m-1">
-  <button mat-flat-button class="mat-elevation-z8 nav-close-button" type="button" color="primary">
+  <button (click)="closeMenu()" mat-flat-button class="mat-elevation-z8 nav-close-button" type="button" color="primary">
     <span class="float-left mt-1">
       Close Menu
     </span>

@@ -1,18 +1,32 @@
-<div class="m-3">
-  <p class="body-2">Please fill in the below form and we will get back to you shortly.</p>
-  <div class="example-container">
+<div class="text-center container">
+  <img class="img-fluid banner-image" [attr.src]="headerImage" alt="Web Logix Header Banner" />
+  <p [@animationState]="animationState.animationState" (mouseenter)="animationState.toggleState()" (mouseleave)="animationState.toggleState()" class="text-black mt-3" [innerHTML]="body"></p>
+  <div class="contact-us-form mx-auto mb-5">
     <mat-form-field>
-        <input matInput placeholder="Email Address" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
-        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-        </mat-error>
-        <mat-error *ngIf="emailFormControl.hasError('required')">
-            Email is <strong>required</strong>
-        </mat-error>
+      <input #name matInput type="text" placeholder="Full Name">
     </mat-form-field>
+    <br>
     <mat-form-field>
-      <textarea matInput placeholder="Comments"></textarea>
+      <input #email matInput placeholder="Email Address" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
     </mat-form-field>
-    <button color="primary" mat-raised-button type="submit">Submit</button>
+    <br>
+    <mat-form-field>
+      <input #mobile matInput type="tel" placeholder="Contact Number">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea #comments matInput placeholder="How can we help ?"></textarea>
+    </mat-form-field>
+    <br>
+    <button color="primary" class="mt-3" mat-raised-button type="submit">Submit</button>
+  </div>
+  <div id="footer" class="text-center">
+      <p class="text-black" [innerHTML]="footer"></p>
   </div>
 </div>

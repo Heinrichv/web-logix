@@ -1,16 +1,11 @@
-<mat-card class="m-1 example-card">
+<mat-card class="mt-3">
   <mat-card-header>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-title [innerHTML]="title"></mat-card-title>
+    <mat-card-subtitle class="" [innerHTML]="header"></mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="" alt="Test Image">
-  <mat-card-content>
-    <p>
-      body
-    </p>
-  </mat-card-content>
+  <img mat-card-image [attr.src]="image" alt="Card Image">
+  <mat-card-content [@animationState]="bodyState.animationState" (mouseenter)="bodyState.toggleState()" (mouseleave)="bodyState.toggleState()" [innerHTML]="body"></mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <button [@animationState]="btnState.animationState" (mouseenter)="btnState.toggleState()" (mouseleave)="btnState.toggleState()" routerLink="/contact_us" class="m-2" mat-raised-button color="primary" [innerHtml]="button"></button>
   </mat-card-actions>
 </mat-card>
