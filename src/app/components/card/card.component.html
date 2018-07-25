@@ -4,8 +4,8 @@
     <mat-card-subtitle class="" [innerHTML]="header"></mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image [attr.src]="image" alt="Card Image">
-  <mat-card-content [@animationState]="bodyState.animationState" (mouseenter)="bodyState.toggleState()" (mouseleave)="bodyState.toggleState()" [innerHTML]="body"></mat-card-content>
+  <mat-card-content [innerHTML]="body"></mat-card-content>
   <mat-card-actions>
-    <button [@animationState]="btnState.animationState" (mouseenter)="btnState.toggleState()" (mouseleave)="btnState.toggleState()" routerLink="/contact_us" class="m-2" mat-raised-button color="primary" [innerHtml]="button"></button>
+    <button routerLink="/contact_us" class="m-2" mat-raised-button color="primary" [innerHtml]="button"></button>
   </mat-card-actions>
 </mat-card>

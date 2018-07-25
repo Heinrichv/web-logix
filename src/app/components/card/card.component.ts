@@ -6,8 +6,7 @@ import { AnimationState } from '../../models/animation';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
-  animations: new AnimationState().animationExport
+  styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
 
@@ -18,8 +17,6 @@ export class CardComponent implements OnInit {
   public image: string;
   public body: string;
   public button: string;
-  public btnState = new AnimationState();
-  public bodyState = new AnimationState();
 
   constructor() { }
 

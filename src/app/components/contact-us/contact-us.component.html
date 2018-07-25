@@ -1,8 +1,8 @@
 <div class="text-center container">
   <img class="img-fluid banner-image" [attr.src]="headerImage" alt="Web Logix Header Banner" />
-  <p [@animationState]="animationState.animationState" (mouseenter)="animationState.toggleState()" (mouseleave)="animationState.toggleState()" class="text-black mt-3" [innerHTML]="body"></p>
+  <p class="text-black mt-3" [innerHTML]="body"></p>
   <div class="contact-us-form mx-auto mb-5">
-    <mat-form-field>
+    <!-- <mat-form-field>
       <input #name matInput type="text" placeholder="Full Name">
     </mat-form-field>
     <br>
@@ -24,7 +24,8 @@
       <textarea #comments matInput placeholder="How can we help ?"></textarea>
     </mat-form-field>
     <br>
-    <button color="primary" class="mt-3" mat-raised-button type="submit">Submit</button>
+    <button color="primary" class="mt-3" mat-raised-button type="submit">Submit</button> -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe3QPyL5G6UfswByNkwZ4s7l7yl7o-SI2YVbTQhFvelfoN66w/viewform?embedded=true" width="700" height="1400"  frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
   </div>
   <div id="footer" class="text-center">
       <p class="text-black" [innerHTML]="footer"></p>

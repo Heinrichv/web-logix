@@ -22,8 +22,7 @@ export class EmailStateMatcher implements ErrorStateMatcher {
 
 @Component({
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.css'],
-  animations: new AnimationState().animationExport
+  styleUrls: ['./contact-us.component.css']
 })
 
 export class ContactUsComponent implements OnInit {
@@ -43,7 +42,6 @@ export class ContactUsComponent implements OnInit {
   public path: string;
   public contact: IContactProfileData;
   public hasSubscribed = false;
-  public animationState = new AnimationState();
 
   ngOnInit() {
     this.getCopy();
