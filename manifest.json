@@ -38,7 +38,7 @@
     }
   ],
   "start_url": "/web-logix/?utm_source=homescreen",
-  "background_color": "#3f51b5",
-  "Theme_color": "#3f51b5",
+  "background_color": "#6200ee",
+  "Theme_color": "#6200ee",
   "display": "standalone"
 }
